@@ -29,8 +29,6 @@ import './Searchbar.css'
     return (
         <header className="searchbar">
         <form  onSubmit={ this.hendleSubmit}   className="form">
-
-      
           <input  
           onChange={this.hendleChange}
             className="input"
