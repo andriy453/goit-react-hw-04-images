@@ -13,12 +13,14 @@ const Modal = ({onClose,image}) =>{
 
   useEffect(()=>{
    return  window.addEventListener('keydown', keyDown);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   useLayoutEffect(() => {
   return () => {
     window.removeEventListener('keydown', keyDown);
   }
+// eslint-disable-next-line react-hooks/exhaustive-deps
 }, [])
 
 const keyDown = e => {
