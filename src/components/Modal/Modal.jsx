@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom';
 import  { useEffect,useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import './Modal.css';
+import  css from './Modal.module.css';
 
 const newDiv = document.createElement("div");
 newDiv.id='ModalRoot';
@@ -36,8 +36,8 @@ const onOverlayClose = e => {
 };
 const { largeImageURL } = image;
 return createPortal(
-  <div onClick={onOverlayClose} className="Overlay">
-    <div className="Modal">
+  <div onClick={onOverlayClose} className={css.Overlay}>
+    <div className={css.Modal}>
       <img src={largeImageURL} alt="img" />
     </div>
   </div>,

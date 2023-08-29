@@ -1,4 +1,4 @@
-.Button-load {
+.Button_load {
     display: block;
     margin: 20px auto;
     padding: 15px;
@@ -9,6 +9,6 @@
     color: white;
     cursor: pointer;
   }
-  .Button-load:hover {
+  .Button_load:hover {
     background-color: blue;
   }

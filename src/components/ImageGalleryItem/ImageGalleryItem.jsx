@@ -1,6 +1,6 @@
 import  {useState } from 'react';
 
-import './ImageGalleryItem.css';
+import css from  './ImageGalleryItem.module.css';
 import Modal from '../Modal';
 import PropTypes from 'prop-types';
 
@@ -12,10 +12,10 @@ const onModal = () => {
 };
 const { webformatURL } = item;
 return (
-  <li className="gallery-item">
+  <li className={css.gallery_item}>
     <img
       onClick={onModal}
-      className="gallery-img"
+      className={css.gallery_img}
       src={webformatURL}
       alt="img"
     />

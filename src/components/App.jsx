@@ -6,7 +6,6 @@ import ImageGallery from './ImageGallery';
 import Searchbar from './Searchbar';
 import Notiflix from 'notiflix';
 import Loader from './Loader';
-import './App.css';
 
 let page = 1;
 
@@ -57,14 +56,14 @@ const onNextPage = async () => {
 
 if (status === 'idle') {
   return (
-    <div className="App">
+    <div>
       <Searchbar onSubmit={handleSubmit} />
     </div>
   );
 }
 if (status === 'pending') {
   return (
-    <div className="App">
+    <div>
       <Searchbar onSubmit={handleSubmit} />
       <ImageGallery page={page} items={items} />
       <Loader />
@@ -74,7 +73,7 @@ if (status === 'pending') {
 }
 if (status === 'rejected') {
   return (
-    <div className="App">
+    <div>
       <Searchbar onSubmit={handleSubmit} />
       <p>Something wrong, try later</p>
     </div>
@@ -82,7 +81,7 @@ if (status === 'rejected') {
 }
 if (status === 'resolved') {
   return (
-    <div className="App">
+    <div>
       <Searchbar onSubmit={handleSubmit} />
       <ImageGallery page={page} items={items} />
       {totalHits > 12 && totalHits > items.length && (
